@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `Umuzi` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `Umuzi`;
 -- MySQL dump 10.13  Distrib 5.7.26, for Linux (x86_64)
 --
 -- Host: localhost    Database: Umuzi
@@ -44,7 +42,7 @@ CREATE TABLE `Customers` (
 
 LOCK TABLES `Customers` WRITE;
 /*!40000 ALTER TABLE `Customers` DISABLE KEYS */;
-INSERT INTO `Customers` VALUES (1,'John','Hibert','Male','284 chaucer st',84789657,'john@gmail.com','Johannesburg','South Africa'),(2,'Thando','Sithole','Female','240 Sect 1',794445584,'thando@gmail.com','Cape Town','South Africa'),(3,'Leon','Glen','Male','81 Everton Rd,Gillits',820832830,'Leon@gmail.com','Durban','South Africa'),(4,'Charl','Muller','Male','290A Dorset Ecke',856872553,'Charl.muller@yahoo.com','Berlin','Germany'),(5,'Julia','Stein','Female','2 Wernerring',672445058,'Js234@yahoo.com','Frankfurt','Germany');
+INSERT INTO `Customers` VALUES (1,'Lerato','Mabitso','Male','284 chaucer st',84789657,'john@gmail.com','Johannesburg','South Africa'),(3,'Leon','Glen','Male','81 Everton Rd,Gillits',820832830,'Leon@gmail.com','Durban','South Africa'),(4,'Charl','Muller','Male','290A Dorset Ecke',856872553,'Charl.muller@yahoo.com','Berlin','Germany'),(5,'Julia','Stein','Female','2 Wernerring',672445058,'Js234@yahoo.com','Frankfurt','Germany');
 /*!40000 ALTER TABLE `Customers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -135,12 +133,12 @@ DROP TABLE IF EXISTS `Products`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Products` (
-  `roductId` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ProductId` varchar(50) NOT NULL,
   `productName` varchar(100) NOT NULL,
   `description` varchar(500) NOT NULL,
   `buyPrice` decimal(10,0) DEFAULT NULL,
-  PRIMARY KEY (`roductId`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`ProductId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -149,7 +147,7 @@ CREATE TABLE `Products` (
 
 LOCK TABLES `Products` WRITE;
 /*!40000 ALTER TABLE `Products` DISABLE KEYS */;
-INSERT INTO `Products` VALUES (1,'Harley Davidson Chopper','This replica features working kickstand, front suspension, gear-shift lever',151),(2,'Classic Car','Turnable front wheels, steering function',551),(3,'Sports car','Turnable front wheels, steering function',701);
+INSERT INTO `Products` VALUES ('1','Harley Davidson Chopper','This replica features working kickstand, front suspension, gear-shift lever',151),('2','Classic Car','Turnable front wheels, steering function',551),('3','Sports car','Turnable front wheels, steering function',701);
 /*!40000 ALTER TABLE `Products` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -162,4 +160,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-11  3:06:35
+-- Dump completed on 2019-06-13  1:24:52
