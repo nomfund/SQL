@@ -1,8 +1,10 @@
+CREATE DATABASE  IF NOT EXISTS `Umuzi` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `Umuzi`;
 -- MySQL dump 10.13  Distrib 5.7.26, for Linux (x86_64)
 --
 -- Host: localhost    Database: Umuzi
 -- ------------------------------------------------------
--- Server version	5.7.26-0ubuntu0.18.04.1
+-- Server version	5.7.26-0ubuntu0.19.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -133,12 +135,12 @@ DROP TABLE IF EXISTS `Products`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Products` (
-  `ProductId` varchar(50) NOT NULL,
-  `productName` varchar(100) NOT NULL,
-  `description` varchar(500) NOT NULL,
-  `buyPrice` decimal(10,0) DEFAULT NULL,
+  `ProductId` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ProductName` varchar(100) NOT NULL,
+  `Description` varchar(500) NOT NULL,
+  `BuyPrice` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`ProductId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -147,7 +149,7 @@ CREATE TABLE `Products` (
 
 LOCK TABLES `Products` WRITE;
 /*!40000 ALTER TABLE `Products` DISABLE KEYS */;
-INSERT INTO `Products` VALUES ('1','Harley Davidson Chopper','This replica features working kickstand, front suspension, gear-shift lever',151),('2','Classic Car','Turnable front wheels, steering function',551),('3','Sports car','Turnable front wheels, steering function',701);
+INSERT INTO `Products` VALUES (1,'Harley Davidson Chopper','This replica features working kickstand, front suspension, gear-shift lever','151'),(2,'Classic Car','Turnable front wheels, steering function','551'),(3,'Sports car','Turnable front wheels, steering function','701');
 /*!40000 ALTER TABLE `Products` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -160,4 +162,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-13  1:24:52
+-- Dump completed on 2019-06-13 13:46:08
