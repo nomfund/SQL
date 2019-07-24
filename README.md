@@ -18,5 +18,5 @@ What Can SQL do?
 About my files:
 
     SQL 	                      - Work that was done on the terminal (the actual code that I emplimented)
-    database_documentation.ipynb  - documentation(done on jupyter) with code and comments to make it readable and understable to      the user
+    database_documentation.ipynb  - documentation(done on jupyter) with code and comments to make it readable and understable to the user
     script.sql                    - A script that I downloaded from mysql workbech
